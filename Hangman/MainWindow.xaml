@@ -11,13 +11,13 @@
             <StackPanel>
                
                 <!-- Hangman Word-->
-                <TextBox Text="START A NEW GAME" Padding="2" IsReadOnly="True" FontFamily="Lucida Console" FontSize="16" />
+                <TextBox Name="WordBox" Text="START A NEW GAME" Padding="2" IsReadOnly="True" FontFamily="Lucida Console" FontSize="16" />
 
                 <!-- Hangman Image-->
-                <Image Source="Images/hangman_16.png" Margin="0 5 0 0" />
+                <Image Name="HangmanImage" Source="Images/hangman_16.png" Margin="0 5 0 0" />
 
                 <!-- Letters -->
-                <WrapPanel Name="wp" Orientation="Horizontal" Initialized="Wp_Initialized">
+                <WrapPanel Name="Wp" Orientation="Horizontal" Initialized="Wp_Initialized">
                     <WrapPanel.Resources>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Margin" Value="10 5 0 5"/>
@@ -37,12 +37,12 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Button Name="newBtn" Content="New Game" Grid.Column="0" Margin="10 5 5 5" />
+                    <Button Name="NewBtn" Content="New Game" Grid.Column="0" Margin="10 5 5 5" Click="NewBtn_Click" />
 
                     <StackPanel Grid.Column="1" Margin="20 0 0 0">
-                        <RadioButton Content="Easy"/>
-                        <RadioButton Content="Medium" IsChecked="True"/>
-                        <RadioButton Content="Hard"/>
+                        <RadioButton Name="EasyBtn" Content="Easy"/>
+                        <RadioButton Name="MediumBtn" Content="Medium" IsChecked="True"/>
+                        <RadioButton Name="HardBtn" Content="Hard"/>
                     </StackPanel>
                 </Grid>
 

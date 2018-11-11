@@ -113,5 +113,10 @@
     <Resource Include="Images\hangman_8.png" />
     <Resource Include="Images\hangman_9.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
